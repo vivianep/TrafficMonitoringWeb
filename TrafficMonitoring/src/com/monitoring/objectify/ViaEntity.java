@@ -1,5 +1,7 @@
 package com.monitoring.objectify;
 
+import java.util.*;
+
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.annotation.*;
@@ -8,22 +10,53 @@ import com.googlecode.objectify.annotation.*;
 public class ViaEntity {
 
 	@Id private Long id; 
-	@Index private int index;
+	private int id_via;
 	private int qtdCarros;
 	private String viaNome;
 	private String situacaoVia;
-	private boolean acidente;
+	private Date date;
+	@Ignore private boolean acidente;
+	private String acidenteString;
 
 
 	public ViaEntity() {
 		// TODO Auto-generated constructor stub
 	}
-	public ViaEntity(String viaNome, String situacaoVia, int qtd, int index){
+	public ViaEntity(int id_via, String situacaoVia, int qtd, boolean acidente,Date date){
 		id=null;
+		this.id_via=id_via;
+		switch(id_via){
+		case(1):
+			viaNome="Salgado Filho";
+		break;
+		case(2):
+			viaNome="Prudente de Morais";
+		break;
+		case(3):
+			viaNome="Amintas Barros";
+		break;
+		case(4):
+			viaNome="Hermes da Fonseca";
+		break;
+		case(5):
+			viaNome="Av. Engenheiro Roberto Freire";
+		break;
+		case(6):
+			viaNome="Av. Antônio Basílio";
+		break;
+		case(7):
+			viaNome="Av. Bernardo Viera";
+		break;
+		}
 		this.viaNome=viaNome;
 		this.situacaoVia=situacaoVia;
-		this.index=index;
 		this.qtdCarros=qtd;
+		if(!acidente)
+			acidenteString="Não há acidentes";
+		else
+			acidenteString="Acidente Registrado";
+		this.date=date;
+
 	}
 
 
@@ -39,11 +72,6 @@ public class ViaEntity {
 
 	public String getViaNome() {
 		return viaNome;
-	}
-
-
-	public void setViaNome(String viaNome) {
-		this.viaNome = viaNome;
 	}
 
 
@@ -65,20 +93,18 @@ public class ViaEntity {
 	public void setAcidente(boolean acidente) {
 		this.acidente = acidente;
 	}
-	public int getIndex() {
-		return index;
-	}
-	public void setIndex(int index) {
-		this.index = index;
-	}
 	public int getQtdCarros() {
 		return qtdCarros;
 	}
 	public void setQtdCarros(int qtdCarros) {
 		this.qtdCarros = qtdCarros;
 	}
-	
+	public String getAcidenteString() {
+		return acidenteString;
+	}
 
-	
-	
+
+
+
+
 }

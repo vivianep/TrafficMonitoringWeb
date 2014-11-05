@@ -10,20 +10,19 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
 import com.monitoring.objectify.*;
 
-@Path("/monitor")
+@Path("/")
 public class MonitoringWebService {
 
 	StartupServlet s= new StartupServlet();
+	
 	@GET
-	@Produces("text/plain")
-	@Path("/teste/{via}/{carros}")
-	public String atualizarTeste(@PathParam("via") int via, @PathParam("carros") int carros) { 
-		//HttpServletRequest req = null;
-		//Long date=req.getDateHeader("http://trafficmonitoring-lv.appspot.com/rest/monitor/teste/"+Integer.toString(via)+"/" +carros);
-		return "Via "+via+"--"+carros+"Timestamp:";//date;
+	@Path("{via}/{carros}/{situacao}/{acidente}")
+	public void atualizarTeste(@PathParam("via") int id_via , @PathParam("carros") int carros , @PathParam("situacao") String situacao , @PathParam("acidente") boolean acidente) { 
+		Date date= new Date();
+		ViaEntity via = new ViaEntity(id_via, situacao, carros, acidente, date);
+		s.saveVia(via);
 	}
 
 }
