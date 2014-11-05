@@ -13,7 +13,7 @@ public class StartupServlet {
 
 	public Iterable<ViaEntity> loadVias(){
 
-		Iterable<ViaEntity> vias =ofy().load().type(ViaEntity.class).filter("index", 1);
+		Iterable<ViaEntity> vias =ofy().load().type(ViaEntity.class);
 		return vias;
 	}
 

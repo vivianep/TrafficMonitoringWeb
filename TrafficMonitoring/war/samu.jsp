@@ -44,9 +44,11 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
+								
 								<li ><a href="index.html">Home</a></li>
-								<li class="current"><a href="sec-transportes.html">Sec Transportes</a></li>
-								<li><a href="samu.html">SAMU</a></li>
+								<li class="current"><a href="sec_transportes.jsp">Sec Transportes</a></li>
+								<li><a href="samu.jsp">SAMU</a></li>
+								
 								
 							</ul>
 						</nav>

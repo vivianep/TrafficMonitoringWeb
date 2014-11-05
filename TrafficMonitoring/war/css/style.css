@@ -660,8 +660,7 @@
 	
 	#footer-wrapper
 	{
-		background: #ff1a1a ;
-		height:70%;
+		background: #ff1a1a url('images/overlay.png'); ;
 		color: #eee;
 		color: rgba(255,255,255,0.5);
 	}

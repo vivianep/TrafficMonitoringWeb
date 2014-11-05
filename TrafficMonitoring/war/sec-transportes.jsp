@@ -12,6 +12,7 @@
 	<head>
 		<title>Secretaria de Transportes</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="refresh" content="5" >
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
@@ -46,8 +47,8 @@
 						<nav id="nav">
 							<ul>
 								<li ><a href="index.html">Home</a></li>
-								<li class="current"><a href="sec_transportes.html">Sec Transportes</a></li>
-								<li><a href="samu.html">SAMU</a></li>
+								<li class="current"><a href="sec_transportes.jsp">Sec Transportes</a></li>
+								<li><a href="samu.jsp">SAMU</a></li>
 								
 							</ul>
 						</nav>
@@ -60,10 +61,6 @@
 				<div class="title">Secretaria Transportes</div>
 				
 				<div id="main" class="container">
-				
-		}
-
-
 						<div class="secretaria">
 							<table class="center">
 	  							<tr>
@@ -82,7 +79,7 @@
 		  								<td><%=via.getViaNome()%></td>
 		  								<td><%=via.getQtdCarros()%></td>
 		  								<td><%=via.getSituacaoVia()%></td>
-		  								<td><%=via.getAcidente()%></td>
+		  								<td><%=via.getAcidenteString()%></td>
 		  							</tr>
 		  						<%
 	  							}
@@ -97,7 +94,7 @@
 		<div id="footer-wrapper" class="wrapper">
 				<div class="title">The Rest Of It</div>
 				<div id="copyright">
-					<p> Application by <strong>Team Monitoring</strong></p>
+					<p> Application by <strong>TroubleTeam</strong></p>
 					<p>Repository:<a href="https://github.com/vivianep/TrafficMonitoringWeb.git"><strong>GitHub</strong></a></p>
 					<ul>
 						<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>

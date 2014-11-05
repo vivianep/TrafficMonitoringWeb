@@ -45,7 +45,7 @@ public class ViaEntity {
 			viaNome="Av. Antônio Basílio";
 		break;
 		case(7):
-			viaNome="Av. Bernardo Viera";
+			viaNome="Av. Bernardo Vieira";
 		break;
 		}
 		this.viaNome=viaNome;
