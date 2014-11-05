@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/mirrors/Downloads/bibliotecaswebservice/javax.ws.rs-api-2.0-m02.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mirrors/Downloads/jaxb-ri-2.2.11/jaxb-ri/lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mirrors/Downloads/jaxb-ri-2.2.11/jaxb-ri/lib/jaxb-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mirrors/Downloads/jaxb-ri-2.2.11/jaxb-ri/lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mirrors/Downloads/jaxb-ri-2.2.11/jaxb-ri/lib/jaxb-jxc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mirrors/Downloads/jaxb-ri-2.2.11/jaxb-ri/lib/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mirrors/Desktop/libs AppEngine/jersey-bundle-1.15.jar"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mirrors/Downloads/objectify-5.1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/guava-18.0.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

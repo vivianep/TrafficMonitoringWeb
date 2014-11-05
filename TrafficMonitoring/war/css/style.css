@@ -647,7 +647,7 @@
 		background-size: cover;
 	}
 	
-		#header-wrapper:before
+		#header-wrapper:beforea
 		{
 			content: '';
 			position: absolute;
@@ -660,7 +660,8 @@
 	
 	#footer-wrapper
 	{
-		background: #282b34 url('images/overlay.png');
+		background: #ff1a1a ;
+		height:70%;
 		color: #eee;
 		color: rgba(255,255,255,0.5);
 	}
@@ -684,58 +685,15 @@
 			border-top-color: rgba(255,255,255,0.05);
 		}
 
-		#footer-wrapper form
-		{
-		}
+		
+		
 
-			#footer-wrapper form input[type="text"],
-			#footer-wrapper form input[type="email"],
-			#footer-wrapper form input[type="password"],
-			#footer-wrapper form select,
-			#footer-wrapper form textarea
-			{
-				background: #ccc;
-				box-shadow: none;
-			}
-
-			#footer-wrapper form input[type="text"]:focus,
-			#footer-wrapper form input[type="email"]:focus,
-			#footer-wrapper form input[type="password"]:focus,
-			#footer-wrapper form select:focus,
-			#footer-wrapper form textarea:focus
-			{
-				background: #fff;
-			}
-
-		#footer-wrapper input[type="button"].style2,
-		#footer-wrapper input[type="submit"].style2,
-		#footer-wrapper input[type="reset"].style2,
-		#footer-wrapper .button.style2
-		{
-			color: #aaa;
-			box-shadow: inset 0px 0px 2px 0px rgba(255,255,255,0.5);
-		}
-
-			#footer-wrapper input[type="button"].style2:hover,
-			#footer-wrapper input[type="submit"].style2:hover,
-			#footer-wrapper input[type="reset"].style2:hover,
-			#footer-wrapper .button.style2:hover
-			{
-				color: #ccc;
-				box-shadow: inset 0px 0px 2px 0px rgba(255,255,255,0.65);
-			}
-
-			#footer-wrapper input[type="button"].style2:active,
-			#footer-wrapper input[type="submit"].style2:active,
-			#footer-wrapper input[type="reset"].style2:active,
-			#footer-wrapper .button.style2:active
-			{
-				box-shadow: inset 0px 0px 2px 0px rgba(255,255,255,0.75);
-			}
+			
+		
 
 		#footer-wrapper .title
 		{
-			background: #282b34 url('images/overlay.png');
+			background: #ff1a1a url('images/overlay.png');
 			color: #eee;
 		}
 		
@@ -753,25 +711,7 @@
 				color: inherit;
 			}
 
-		#footer-wrapper .feature-list
-		{
-		}
-		
-			#footer-wrapper .feature-list section
-			{
-				border-top-color: #333;
-				border-top-color: rgba(255,255,255,0.05);
-			}
-
-			#footer-wrapper .feature-list h3
-			{
-			}
 			
-				#footer-wrapper .feature-list h3:before
-				{
-					background: #3d4249 url('images/overlay.png');
-				}
-		
 /*********************************************************************************/
 /* Table                                                                          */
 /*********************************************************************************/
@@ -869,7 +809,7 @@ table, th, td {
 			border-radius: 0.35em;
 			box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.05);
 			color: #aaa;
-			color: rgba(255,255,255,0.25);
+			color: rgba(255,255,255,0.75);
 		}
 		
 		#copyright a
@@ -886,7 +826,7 @@ table, th, td {
 /*********************************************************************************/
 .secretaria th{
 
-	background-color: red;
+	background-color: black;
     color: white;
 
 }
