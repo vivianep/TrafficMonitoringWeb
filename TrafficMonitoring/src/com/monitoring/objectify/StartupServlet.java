@@ -9,12 +9,11 @@ public class StartupServlet {
 
 	static {
 		ObjectifyService.register(ViaEntity.class);
+		ObjectifyService.register(AcidenteEntity.class);
 	}
 
 	public Iterable<ViaEntity> loadVias(){
-
-		Iterable<ViaEntity> vias =ofy().load().type(ViaEntity.class);
-		return vias;
+		return ofy().load().type(ViaEntity.class);
 	}
 
 	public void saveVias(List<ViaEntity> list_vias){
@@ -25,6 +24,13 @@ public class StartupServlet {
 		ofy().save().entity(via).now();
 	}
 
+	public void saveAcidente(AcidenteEntity acidente){
+		ofy().save().entity(acidente).now();
+	}
+
+	public Iterable<AcidenteEntity> loadAcidentes(){
+		return ofy().load().type(AcidenteEntity.class);
+	}
 
 
 }

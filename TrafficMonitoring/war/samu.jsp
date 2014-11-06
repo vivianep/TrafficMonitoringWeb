@@ -61,34 +61,28 @@
 				<div class="title">SAMU</div>
 				<div id="main" class="container">
 						<div class="secretaria">
+							<h1>Acidentes Registrados</h1>
 							<table class="center">
 	  							<tr>
 	    							<th>Via</th>
 	    							<th>Acidentes na Via</th>
-	  								<th>Ambulância Disponiveis</th>
+	  								<th>Data Ocorrência</th>
 	  							</tr>
 	  							<%
 	  							StartupServlet s= new StartupServlet();
-	  							Iterable<ViaEntity> iterator= s.loadVias();
-								Iterator<ViaEntity> iter=iterator.iterator();
-	  							while(iter.hasNext()){
-									ViaEntity via=iter.next();
+	  							Iterable<AcidenteEntity> iterable_aci= s.loadAcidentes();
+								Iterator<AcidenteEntity> iterator_aci=iterable_aci.iterator();
+	  							while(iterator_aci.hasNext()){
+									AcidenteEntity acidente=iterator_aci.next();
 		  						%>	<tr>
-		  								<td><%=via.getViaNome()%></td>
-		  								<td><%=via.getAcidente()%></td>
-		  								<td><select > 
-											<option class="under" selected value="State">Ambulância </option> 
-											<option>01</option>
-											<option>02</option>
-											<option>03</option>
-											<option>04</option>
-											<option>05</option>
-											</select> </td> 
-											
+		  								<td><%=acidente.getId_via()%></td>
+		  								<td><%=acidente.getAcidenteString()%></td>
+		  								<td><%=acidente.getDate()%></td>
 		  							</tr>
 		  						<%
 	  							}
 	  							%>
+		  						
 	  							</table>
 	  					
 	  					</div>

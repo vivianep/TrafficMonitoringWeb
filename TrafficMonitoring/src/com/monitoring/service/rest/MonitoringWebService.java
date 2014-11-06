@@ -18,11 +18,19 @@ public class MonitoringWebService {
 	StartupServlet s= new StartupServlet();
 	
 	@GET
-	@Path("{via}/{carros}/{situacao}/{acidente}")
-	public void atualizarTeste(@PathParam("via") int id_via , @PathParam("carros") int carros , @PathParam("situacao") String situacao , @PathParam("acidente") boolean acidente) { 
+	@Path("via/{via}/{carros}")
+	public void atualizarVia(@PathParam("via") int id_via , @PathParam("carros") int carros ) { 
 		Date date= new Date();
-		ViaEntity via = new ViaEntity(id_via, situacao, carros, acidente, date);
+		ViaEntity via = new ViaEntity(id_via,carros,date);
 		s.saveVia(via);
+	}
+	
+	@GET
+	@Path("acidente/{via}/{acidente}")
+	public void atualizarAcidente(@PathParam ("via") int id_via,@PathParam ("acidente")boolean acidente){
+		Date date= new Date();
+		AcidenteEntity acidenteEnt=new AcidenteEntity(id_via, acidente, date);
+		s.saveAcidente(acidenteEnt);
 	}
 
 }

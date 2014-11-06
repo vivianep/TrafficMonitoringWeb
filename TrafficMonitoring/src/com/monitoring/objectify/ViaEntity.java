@@ -15,14 +15,14 @@ public class ViaEntity {
 	private String viaNome;
 	private String situacaoVia;
 	private Date date;
-	@Ignore private boolean acidente;
-	private String acidenteString;
+	
 
 
 	public ViaEntity() {
 		// TODO Auto-generated constructor stub
 	}
-	public ViaEntity(int id_via, String situacaoVia, int qtd, boolean acidente,Date date){
+	public ViaEntity(int id_via, int qtd,Date date){
+	
 		id=null;
 		this.id_via=id_via;
 		switch(id_via){
@@ -48,13 +48,13 @@ public class ViaEntity {
 			viaNome="Av. Bernardo Vieira";
 		break;
 		}
-		this.viaNome=viaNome;
-		this.situacaoVia=situacaoVia;
-		this.qtdCarros=qtd;
-		if(!acidente)
-			acidenteString="Não há acidentes";
+		if(qtd>30)
+			situacaoVia="Congestionado";
 		else
-			acidenteString="Acidente Registrado";
+			situacaoVia="Livre";
+			
+		this.viaNome=viaNome;
+		this.qtdCarros=qtd;
 		this.date=date;
 
 	}
@@ -84,24 +84,16 @@ public class ViaEntity {
 		this.situacaoVia = situacaoVia;
 	}
 
-
-	public boolean getAcidente() {
-		return acidente;
-	}
-
-
-	public void setAcidente(boolean acidente) {
-		this.acidente = acidente;
-	}
 	public int getQtdCarros() {
 		return qtdCarros;
 	}
 	public void setQtdCarros(int qtdCarros) {
 		this.qtdCarros = qtdCarros;
 	}
-	public String getAcidenteString() {
-		return acidenteString;
+	public Date getDate() {
+		return date;
 	}
+	
 
 
 
