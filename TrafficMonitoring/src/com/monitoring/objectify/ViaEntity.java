@@ -10,52 +10,48 @@ import com.googlecode.objectify.annotation.*;
 public class ViaEntity {
 
 	@Id private Long id; 
-	private int id_via;
+	@Index private int id_via;
 	private int qtdCarros;
 	private String viaNome;
-	private String situacaoVia;
-	private Date date;
-	
+	@Index private String situacaoVia;
+	@Index private Date date;
+	@Index private int ano;
+	@Index private int mes;
+	@Index private int dia;
+	@Ignore
+	public static String[] nomes = new String[7];
+	static{
+	nomes[0]="Salgado Filho";
+	nomes[1]="Prudente de Morais";
+	nomes[2]="Amintas Barros";
+	nomes[3]="Hermes da Fonseca";
+	nomes[4]="Av. Engenheiro Roberto Freire";
+	nomes[5]="Av. Antônio Basílio";
+	nomes[6]="Av. Bernardo Vieira";
+	}
+
 
 
 	public ViaEntity() {
 		// TODO Auto-generated constructor stub
 	}
 	public ViaEntity(int id_via, int qtd,Date date){
-	
+
 		id=null;
 		this.id_via=id_via;
-		switch(id_via){
-		case(1):
-			viaNome="Salgado Filho";
-		break;
-		case(2):
-			viaNome="Prudente de Morais";
-		break;
-		case(3):
-			viaNome="Amintas Barros";
-		break;
-		case(4):
-			viaNome="Hermes da Fonseca";
-		break;
-		case(5):
-			viaNome="Av. Engenheiro Roberto Freire";
-		break;
-		case(6):
-			viaNome="Av. Antônio Basílio";
-		break;
-		case(7):
-			viaNome="Av. Bernardo Vieira";
-		break;
-		}
 		if(qtd>30)
 			situacaoVia="Congestionado";
 		else
 			situacaoVia="Livre";
-			
-		this.viaNome=viaNome;
+
+		this.viaNome=ViaEntity.nomes[id_via-1];
 		this.qtdCarros=qtd;
 		this.date=date;
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		this.ano= cal.get(Calendar.YEAR);
+		this.mes=1+cal.get(Calendar.MONTH);
+		this.dia=cal.get(Calendar.DAY_OF_MONTH);
 
 	}
 
@@ -64,9 +60,8 @@ public class ViaEntity {
 		return id;
 	}
 
-
-	public void setId(Long id) {
-		this.id = id;
+	public int getId_via(){
+		return id_via;
 	}
 
 
@@ -93,7 +88,7 @@ public class ViaEntity {
 	public Date getDate() {
 		return date;
 	}
-	
+
 
 
 

@@ -365,8 +365,7 @@
 			#nav > ul > li > span
 			{
 				display: block;
-				color: #eee;
-				color: rgba(255,255,255,0.75);
+				color: #ffffff;
 				text-transform: uppercase;
 				text-decoration: none;
 				font-size: 1.1em;
@@ -386,7 +385,7 @@
 			#nav > ul > li.active > a,
 			#nav > ul > li.active > span
 			{
-				color: #fff;
+				color: #ffffff;
 			}
 
 	.dropotron
